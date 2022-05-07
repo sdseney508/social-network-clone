@@ -1,7 +1,7 @@
 # social-network-clone
 
 # tech-blog
-Socila networking backend that is built using express, node, MongoDB, aand Mongoose.  Enables recording of thoughts, creating a custom friends list, and recording your reaction to other uses thoughts.
+Social networking backend that is built using express, node, MongoDB, aand Mongoose.  Enables recording of thoughts, creating a custom friends list, and recording your reaction to other uses thoughts.
 
 ## Table of Contents
  -[Installation](#installation)
