@@ -79,9 +79,9 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
  
 A video walkthrough of all features can be found at:    
-https://watch.screencastify.com/v/18peKKGNTJuX6ANugXZw
-https://watch.screencastify.com/v/DSXTy4k6ZRUkxFD8Bok2
-https://watch.screencastify.com/v/7CaRKRYnKz69omfXF39X
+https://watch.screencastify.com/v/18peKKGNTJuX6ANugXZw     
+https://watch.screencastify.com/v/DSXTy4k6ZRUkxFD8Bok2     
+https://watch.screencastify.com/v/7CaRKRYnKz69omfXF39X     
 
  ## Contributing 
  N/A
