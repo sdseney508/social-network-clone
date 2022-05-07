@@ -21,11 +21,9 @@ module.exports = {
   getAnUser(req, res) {
     User.findOne({ _id: req.params.userId }, "thought friends")
       .then(async (user) =>
-        !student
+        !user
           ? res.status(404).json({ message: "No User found for that ID" })
-          : res.json({
-              user,
-            })
+          : res.json({ user })
       )
       .catch((err) => {
         console.log(err);
@@ -46,7 +44,7 @@ module.exports = {
     console.log(req.body);
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { username: req.params.username, email: req.params.email },
+      { $set: {username: req.body.username, email: req.body.email }},
       { runValidators: true, new: true }
     )
       .then((user) =>
@@ -81,10 +79,10 @@ module.exports = {
   // add a friend to a user
   addFriend(req, res) {
     console.log("You are adding a friend to this users list of friends");
-    console.log(req.body);
+    console.log(req.params.friendId);
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $addToSet: { friends: req.params.username } },
+      { $addToSet: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
@@ -100,7 +98,7 @@ module.exports = {
     console.log(req.body);
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: req.body.friendID } },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
